@@ -14,27 +14,41 @@ namespace MinimalAPI.WebAPI.Endpoints
         public static WebApplication AddTodoEndpoints(this WebApplication app)
         {
             var todoItems = app.MapGroup("/todoitems");
-            todoItems.MapGet("/", async (TodoContext context) =>
-                await context.Todos.ToListAsync());
 
-            todoItems.MapGet("/complete", async (TodoContext context) =>
-                await context.Todos.Where(x => x.IsComplete).ToListAsync());
+            todoItems.MapGet("/{id}", Get);
+            todoItems.MapGet("/", GetAll);
+            todoItems.MapGet("/complete", GetAllComplete);
+            todoItems.MapPost("/", Create);
+            todoItems.MapPut("/{id}", Update);
+            todoItems.MapDelete("/{id}", Delete);
 
-            todoItems.MapGet("/{id}", async (int id, TodoContext context) =>
-                await context.Todos.FindAsync(id)
+            static async Task<IResult> Get(int id, TodoContext context)
+            {
+                return await context.Todos.FindAsync(id)
                     is Todo todo
-                    ? Results.Ok(todo)
-                    : Results.NotFound());
+                    ? TypedResults.Ok(todo)
+                    : TypedResults.NotFound();
+            }
 
-            todoItems.MapPost("/", async (Todo todo, TodoContext contexto) =>
+            static async Task<IResult> GetAll(TodoContext context)
+            {
+                return TypedResults.Ok(await context.Todos.ToListAsync());
+            }
+
+            static async Task<IResult> GetAllComplete(TodoContext context)
+            {
+                return TypedResults.Ok(await context.Todos.Where(x => x.IsComplete).ToListAsync());
+            }
+
+            static async Task<IResult> Create(Todo todo, TodoContext contexto)
             {
                 contexto.Todos.Add(todo);
                 await contexto.SaveChangesAsync();
 
-                return Results.Created($"/todoitems/{todo.Id}", todo);
-            });
+                return TypedResults.Created($"/todoitems/{todo.Id}", todo);
+            }
 
-            todoItems.MapPut("/{id}", async (int id, Todo inputTodo, TodoContext contexto) =>
+            static async Task<IResult> Update(int id, Todo inputTodo, TodoContext contexto)
             {
                 var todo = await contexto.Todos.FindAsync(id);
                 if (todo is null) return Results.NotFound();
@@ -43,21 +57,22 @@ namespace MinimalAPI.WebAPI.Endpoints
                 todo.IsComplete = inputTodo.IsComplete;
 
                 await contexto.SaveChangesAsync();
-                return Results.NoContent();
-            });
+                return TypedResults.NoContent();
+            }
 
-            todoItems.MapDelete("/{id}", async (int id, TodoContext context) =>
+            static async Task<IResult> Delete(int id, TodoContext contexto)
             {
-                if (await context.Todos.FindAsync(id) is Todo todo)
+                if (await contexto.Todos.FindAsync(id) is Todo todo)
                 {
-                    context.Todos.Remove(todo);
-                    await context.SaveChangesAsync();
+                    contexto.Todos.Remove(todo);
+                    await contexto.SaveChangesAsync();
 
-                    return Results.NoContent();
+                    return TypedResults.NoContent();
                 }
 
-                return Results.NotFound();
-            });
+                return TypedResults.NotFound();
+            }
+
             return app;
         }
     }
