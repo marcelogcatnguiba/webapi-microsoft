@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MinimalAPI.WebAPI.Context;
 using MinimalAPI.WebAPI.Endpoints;
-using MinimalAPI.WebAPI.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +21,7 @@ builder.Services.AddOpenApiDocument(config =>
 });
 
 var app = builder.Build();
+app.AddTodoEndpoints();
 
 if (app.Environment.IsDevelopment())
 {
@@ -34,9 +34,5 @@ if (app.Environment.IsDevelopment())
         config.DocExpansion = "list";
     });
 }
-
 app.UseHttpsRedirection();
-
-app.AddTodoEndpoints();
-
 app.Run();
