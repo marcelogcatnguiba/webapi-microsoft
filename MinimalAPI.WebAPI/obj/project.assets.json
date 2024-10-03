@@ -3616,11 +3616,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Devs\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+      "projectUniqueName": "D:\\Devs\\devs-csharp\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
       "projectName": "MinimalAPI.WebAPI",
-      "projectPath": "D:\\Devs\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+      "projectPath": "D:\\Devs\\devs-csharp\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
       "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "D:\\Devs\\microsoft-minimalapis\\MinimalAPI.WebAPI\\obj\\",
+      "outputPath": "D:\\Devs\\devs-csharp\\microsoft-minimalapis\\MinimalAPI.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config"

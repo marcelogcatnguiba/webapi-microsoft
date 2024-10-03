@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xhXOIvvV9BCqrnYdQA2WLVI99x+zgChv1GYHAoSBKwG4n4loibjtx3qTguVM+JBfCGR6LhmeDBiGw3xqDcDtig==",
+  "dgSpecHash": "o1bjRhKWWBWPXsUmGgBWQaQs3RUuow2iQl1fonp/L+kx6VBp0xcmtvS5kEhFAYBwtmehmEv9fNOCAKM10Omk7Q==",
   "success": true,
-  "projectFilePath": "D:\\Devs\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+  "projectFilePath": "D:\\Devs\\devs-csharp\\microsoft-minimalapis\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
