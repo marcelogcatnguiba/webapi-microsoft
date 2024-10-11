@@ -20,6 +20,9 @@ builder.Services.AddOpenApiDocument(config =>
     config.Version = "v1";
 });
 
+//LowerCase
+builder.Services.AddRouting(x => x.LowercaseUrls = true);
+
 var app = builder.Build();
 app.AddTodoEndpoints();
 
