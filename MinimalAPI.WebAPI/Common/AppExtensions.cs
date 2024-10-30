@@ -1,3 +1,5 @@
+using MinimalAPI.WebAPI.Context;
+
 namespace MinimalAPI.WebAPI.Common
 {
     public static class AppExtensions
@@ -7,6 +9,13 @@ namespace MinimalAPI.WebAPI.Common
             app.UseSwagger();
             app.UseSwaggerUI();
             app.MapSwagger();
+        }
+
+        public static void CreateDatabase(this WebApplication app)
+        {
+            var serviceScope = app.Services.CreateScope();
+            var dataContext = serviceScope.ServiceProvider.GetService<TodoContext>();
+            dataContext?.Database.EnsureCreated();
         }
     }
 }
