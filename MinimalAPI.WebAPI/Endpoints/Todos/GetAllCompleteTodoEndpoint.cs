@@ -13,7 +13,7 @@ namespace MinimalAPI.WebAPI.Endpoints.Todos
                 .WithName("Todos: Complete")
                 .WithSummary("Recupera todas todos completas")
                 .WithDescription("Recupera todas todos completas")
-                .WithOrder(6)
+                .WithOrder(4)
                 .Produces<List<Todo>>(StatusCodes.Status200OK);
         }
 

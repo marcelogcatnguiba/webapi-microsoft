@@ -12,7 +12,7 @@ namespace MinimalAPI.WebAPI.Endpoints.Todos
                 .WithName("Todos: GetById")
                 .WithSummary("Retorna um Todo pelo Id")
                 .WithDescription("Retorna um Todo pelo Id")
-                .WithOrder(4)
+                .WithOrder(6)
                 .Produces<Todo>(StatusCodes.Status200OK)
                 .Produces(StatusCodes.Status404NotFound);
         }
