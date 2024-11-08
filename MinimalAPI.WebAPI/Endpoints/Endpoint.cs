@@ -8,6 +8,11 @@ namespace MinimalAPI.WebAPI.Endpoints
         public static void MapEndpoints(this WebApplication app)
         {
             var endpoints = app.MapGroup("");
+            
+            endpoints
+                .MapGroup("/")
+                .WithTags("Health Check")
+                .MapGet("/", () => new { message = "OK"});
 
             endpoints
                 .MapGroup("v1/todos")
