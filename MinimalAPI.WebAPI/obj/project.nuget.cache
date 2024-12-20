@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ep+hbdIKgtyihegmMNGNdrKaD+SHNXLf5tIj/1im0afVOiMsVCNdgEpHBsQODerV4DDQXTNXZ3T0gfB34lFmUA==",
+  "dgSpecHash": "+6QZlOBVewo=",
   "success": true,
-  "projectFilePath": "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+  "projectFilePath": "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marcelo.gomes\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
     "C:\\Users\\marcelo.gomes\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",

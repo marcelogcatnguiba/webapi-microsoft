@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj": {}
+    "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj": {
+    "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+        "projectUniqueName": "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
         "projectName": "MinimalAPI.WebAPI",
-        "projectPath": "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
+        "projectPath": "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\MinimalAPI.WebAPI.csproj",
         "packagesPath": "C:\\Users\\marcelo.gomes\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\obj\\",
+        "outputPath": "D:\\Devs\\devs-csharp\\webapi-microsoft\\MinimalAPI.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\marcelo.gomes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -79,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

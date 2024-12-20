@@ -1,6 +1,3 @@
-using MinimalAPI.WebAPI.Common;
-using MinimalAPI.WebAPI.Endpoints;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddDatabase();
