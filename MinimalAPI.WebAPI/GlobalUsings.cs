@@ -7,3 +7,4 @@ global using MinimalAPI.WebAPI.Context.Seed.Todos;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using System.Text.Json.Serialization;
 global using MinimalAPI.WebAPI.Endpoints;
+global using MinimalAPI.WebAPI.Endpoints.HealthCheck;

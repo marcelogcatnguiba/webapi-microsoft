@@ -7,9 +7,7 @@ public static class Endpoint
         var endpoints = app.MapGroup("");
         
         endpoints
-            .MapGroup("/")
-            .WithTags("Health Check")
-            .MapGet("/", () => new { message = "OK"});
+            .MapEndpoint<HealthCheckEndpoint>();
 
         endpoints
             .MapGroup("v1/todos")
