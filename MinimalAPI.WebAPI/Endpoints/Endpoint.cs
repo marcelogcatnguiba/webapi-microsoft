@@ -14,6 +14,7 @@ public static class Endpoint
             .WithTags("Todos")
                 .MapEndpoint<CreateTodoEndpoint>()
                 .MapEndpoint<UpdateTodoEndpoint>()
+                .MapEndpoint<UpdatePartialTodoEndpoint>()
                 .MapEndpoint<DeleteTodoEndpoint>()
                 .MapEndpoint<GetAllTodoEndpoint>()
                 .MapEndpoint<GetByIdTodoEndpoint>()

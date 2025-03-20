@@ -2,6 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddDatabase();
 builder.AddDocumentation();
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 var app = builder.Build();
 
